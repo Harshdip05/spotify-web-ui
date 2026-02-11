@@ -130,3 +130,13 @@ a{
     height:2rem;
     width:fit-content;
 }
+
+.sticky-nav{
+    position:sticky;
+    top:0;
+    background-color: #121212;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    
+}
