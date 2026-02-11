@@ -13,9 +13,10 @@ body  {
 }
 
 .sidebar{
-    background-color:greenyellow;
+    background-color:black;
     width:340px;
     border-radius: 1rem;  /*1rem=16px(root fontsize is 16px)*/
+    margin-right:0.5rem;
 }
 
 .main-content{
@@ -99,4 +100,33 @@ a{
 
 .icons i:hover{
     opacity:1;
+}
+
+.box{
+    background-color: #232323;
+    height:8rem;
+    border-radius: 0.75rem;
+    margin:0.75rem 0rem 1.75rem 0rem;
+    padding:0.75rem 1rem;
+}
+
+.box-p1{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.box-p2{
+    font-size: 0.85rem;
+    opacity:0.9;
+}
+
+.badge{
+    border:none;
+    background-color: white;
+    border-radius: 100px;
+    padding:0.25rem 1rem;
+    font-weight:700;
+    margin-top: 0.5rem;
+    height:2rem;
+    width:fit-content;
 }
