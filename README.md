@@ -3,89 +3,74 @@
 [![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](YOUR_GITHUB_PAGES_LINK_HERE)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A **pixel-perfect recreation of the Spotify Web Player UI**, built using modern **HTML5 and CSS3**.  
-This project focuses on **real-world frontend engineering principles** such as layout architecture, performance optimization, responsive design, and accessibility—similar to patterns used in large-scale production applications.
+A **pixel-perfect recreation of the Spotify Web Player UI**, engineered with **HTML5 and CSS3**. This project demonstrates mastery of modern layout architecture, responsive design, and performance-first CSS—patterns utilized in high-traffic production environments.
+
+---
+
+## 🖥️ Project Preview
+
+![Desktop Preview](./assets/screenshots/desktop-main.png)
+*Figure 1: High-fidelity desktop interface showcasing the Sidebar, Sticky Navigation, and Persistent Music Player.*
 
 ---
 
 ## 📌 Project Overview
 
-The goal of this project is not just visual imitation, but **accurate UI behavior under real-world constraints**:
-- Persistent music player
-- Independently scrollable content
-- Sticky navigation
-- Responsive layout across devices
-
-This clone emphasizes **clean CSS architecture**, minimal DOM complexity, and native browser features over JavaScript-heavy solutions.
+This project solves the architectural challenges of a modern Single Page Application (SPA) layout:
+* **Persistent Global Components:** The music player remains fixed while content updates.
+* **Independent Scroll Containers:** Seamless scrolling in the main content area without affecting the sidebar or player.
+* **Zero-JS Interactivity:** Leveraging CSS pseudo-classes for state management (hover, active, focus).
 
 ---
 
 ## 🚀 Technical Highlights
 
-### 🧱 Layout Architecture
-- Used a **hybrid layout strategy**:
-  - `position: fixed` for the global music player
-  - Flexbox-based layout for the main application shell
-- Scroll behavior handled with `flex: 1` and `overflow-y: auto` to prevent layout reflows
-- Sticky navigation implemented using `position: sticky` (no JS scroll listeners)
+### 🧱 Layout Architecture & UX
+* **Hybrid Positioning Strategy:** Implemented a combination of `position: fixed` for the global controls and a Flexbox-based shell for the main application.
+* **Scroll Management:** Used `overflow-y: auto` on a flex-grow container (`flex: 1`). This prevents "Double Scrollbars" and mimics native app behavior.
+* **Sticky Header:** Implemented `position: sticky` for navigation bars to ensure context-awareness as the user explores the library.
 
-### 🎨 Custom UI Components
-- Custom-styled HTML5 range input for the progress bar
-- Used:
-  - `::-webkit-slider-runnable-track`
-  - `::-webkit-slider-thumb`
-- Styling closely matches Spotify’s native web UI
+### 🎨 Custom UI Engineering
+* **Progress Bar Architecture:** Instead of using heavy libraries, I engineered a custom `<input type="range">` using vendor-specific pseudo-elements (`-webkit-slider-runnable-track` and `-webkit-slider-thumb`) to achieve the exact Spotify branding.
+* **Atomic CSS Principles:** Used utility classes (like `.badge` and `.nav-item`) to ensure style reusability and reduce CSS file size.
 
-### ⚡ Performance Optimization
-- System font stack to reduce font loading overhead
-- Minimal nesting to avoid excessive layout recalculations
-- CSS-only interactions wherever possible
-- Prioritized **above-the-fold CSS** (sidebar + navigation)
+### 📱 Responsive Design Strategy
+* **Fluid Layouts:** Switched from fixed pixel widths to relative units (rem/vh/%) to maintain proportion across different screen densities.
+* **Breakpoint Optimization:** Strategically utilized a `.hide` utility class within Media Queries to prioritize "Critical UI" for mobile users, maximizing the 100vh viewport space.
 
-### 📱 Responsive UX
-- Media queries designed around **content priority**, not device names
-- Introduced a utility `.hide` class to conditionally remove UI elements on smaller screens
-- Layout gracefully adapts from desktop → tablet → mobile
+<p align="center">
+  <img src="./assets/screenshots/mobile-view.png" width="280" alt="Mobile View" />
+  <br>
+  <em>Figure 2: Mobile responsive view prioritizing content accessibility.</em>
+</p>
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Tech Stack & Tools
 
-- **HTML5**
-  - Semantic elements (`nav`, `main`, `section`) for accessibility
-- **CSS3**
-  - Flexbox
-  - Sticky positioning
-  - Custom scrollbars
-  - Media queries
-- **Icons**
-  - FontAwesome 7.0 (CDN)
-- **Typography**
-  - Google Fonts – Montserrat
+* **Core:** HTML5 (Semantic Markup), CSS3 (Modern Flexbox)
+* **Icons:** FontAwesome 7.0 (Optimized CDN)
+* **Typography:** Google Fonts (Montserrat)
+* **Version Control:** Git & GitHub (Feature-branch workflow)
 
 ---
 
 ## 📂 Project Structure
 
 ```text
-
 .
-├── assets/             # Images, icons, and logo assets
-├── homeworkk-assets/   # Images, icons, and logo assets
-├── index.html          # Core structure and semantic markup
-├── style.css           # Modular CSS styles
-├── LICENSE             # MIT license
-└── README.md           # Documentation
-
+├── assets/             # Brand icons and playlist cover art
+│   └── screenshots/    # Project preview images
+├── index.html          # Semantic HTML5 markup
+├── style.css           # Modularized CSS architecture
+├── LICENSE             # MIT License
+└── README.md           # Professional documentation
 ```
+
+---
 
 ## 📄 License
 
 This project is licensed under the **MIT License**.
 
-You are free to:
-- Use the code for personal or commercial projects
-- Modify and distribute the source code
-- Include it in proprietary software
-
-
+```
