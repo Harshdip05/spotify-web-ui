@@ -131,6 +131,11 @@ a{
     width:fit-content;
 }
 
+.dark-badge{
+    background-color: #000;
+    color:white;
+}
+
 .sticky-nav{
     position:sticky;
     top:0;
@@ -138,5 +143,30 @@ a{
     display: flex;
     justify-content:space-between;
     align-items:center;
-    
+    padding:1rem 0rem 1rem 0rem;
+}
+
+.sticky-nav-icons{
+    display:flex;
+    margin-left: 0.5rem;
+}
+
+.sticky-nav-options{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.sticky-nav-options button{
+    margin-right: 1rem;
+}
+
+.nav-item{
+    margin-right: 1rem;;
+}
+
+@media (max-width:1000px){
+    .hide {
+        display:none;
+    }
 }
